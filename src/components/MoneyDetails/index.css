@@ -1,1 +1,49 @@
 /* Write your CSS here */
+.transaction-Item-Container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.money-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-family: Roboto;
+}
+.balance {
+  border-color: #84cc16;
+  background-color: #ecfccb;
+}
+
+.income {
+  border-color: #06b6d4;
+  background-color: #cffafe;
+}
+
+.expenses {
+  border-color: #7c3aed;
+  background-color: #ede9fe;
+}
+
+.imageEle {
+  height: 50px;
+  margin: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .transaction-Item-Container {
+    flex-direction: column;
+  }
+  .imageEle {
+    height: 50px;
+    margin: 14px;
+  }
+}

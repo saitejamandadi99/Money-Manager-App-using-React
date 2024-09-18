@@ -37,6 +37,12 @@
   color: #0b69ff;
 }
 
+.transaction-Item-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 @media screen and (max-width: 767px) {
   .user-Container {
     align-items: center;
@@ -47,5 +53,9 @@
   }
   .welcome {
     font-size: 15px;
+  }
+
+  .transaction-Item-Container {
+    flex-direction: column;
   }
 }

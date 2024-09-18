@@ -1,4 +1,7 @@
 import {Component} from 'react'
+
+import MoneyDetails from '../MoneyDetails'
+
 import './index.css'
 
 const transactionTypeOptions = [
@@ -21,10 +24,13 @@ class MoneyManager extends Component {
           <div className="user-Container">
             <h1 className="heading">Hi, Richard</h1>
             <p className="welcome">
-              Welcome back to your <span className='spanEle'>Money Manager</span>
+              Welcome back to your{' '}
+              <span className="spanEle">Money Manager</span>
             </p>
           </div>
-          <ul className="transaction-Item-Container"></ul>
+          <div className="transaction-Item-Container">
+            <MoneyDetails />
+          </div>
           <div className="transaction-history-Container">
             <form></form>
             <div className="history-Container">
