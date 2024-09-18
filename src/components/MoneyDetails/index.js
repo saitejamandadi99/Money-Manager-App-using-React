@@ -1,6 +1,7 @@
-// Write your code here
 import './index.css'
+
 const MoneyDetails = props => {
+  const {balance, income, expenses} = props
   return (
     <div className="transaction-Item-Container">
       <div className="money-Container balance">
@@ -11,7 +12,8 @@ const MoneyDetails = props => {
         />
         <div className="money-Info-Container">
           <p>Your Balance</p>
-          <p>Rs:</p>
+          <p data-testid="balanceAmount">Rs: {balance}</p>{' '}
+          {/* Correct testid */}
         </div>
       </div>
 
@@ -23,7 +25,8 @@ const MoneyDetails = props => {
         />
         <div className="money-Info-Container">
           <p>Your Income</p>
-          <p>Rs:</p>
+          <p data-testid="incomeAmount">Rs: {income}</p>{' '}
+          {/* Added testid for income */}
         </div>
       </div>
 
@@ -35,7 +38,8 @@ const MoneyDetails = props => {
         />
         <div className="money-Info-Container">
           <p>Your Expenses</p>
-          <p>Rs:</p>
+          <p data-testid="expensesAmount">Rs: {expenses}</p>{' '}
+          {/* Added testid for expenses */}
         </div>
       </div>
     </div>

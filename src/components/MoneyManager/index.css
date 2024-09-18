@@ -70,6 +70,7 @@ input {
   width: 70%;
   margin-bottom: 12px;
   padding: 10px;
+  font-size: 20px;
 }
 
 label {
@@ -84,6 +85,7 @@ select {
   width: 70%;
   margin-bottom: 12px;
   padding: 10px;
+  font-size: 20px;
 }
 
 .addBtn {
@@ -139,7 +141,11 @@ select {
   width: 100%;
   height: 1px;
 }
-
+.list-Container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (max-width: 767px) {
   .user-Container {
     align-items: center;
@@ -159,6 +165,13 @@ select {
     flex-direction: column;
   }
   .form-Container {
+    width: 100%;
+  }
+  input,
+  select {
+    font-size: 12px;
+  }
+  .history-Container {
     width: 100%;
   }
 }

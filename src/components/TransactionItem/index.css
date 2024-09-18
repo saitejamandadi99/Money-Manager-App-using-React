@@ -1,1 +1,12 @@
 /* Write your CSS here */
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.buttonEle {
+  outline: none;
+  cursor: pointer;
+  border: 0px;
+  height: 30px;
+}
