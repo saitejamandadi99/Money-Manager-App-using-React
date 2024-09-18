@@ -42,6 +42,63 @@
   flex-direction: row;
   justify-content: space-around;
 }
+.transaction-history-Container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-Container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin: 2%;
+  font-family: Roboto;
+  border: 1px solid #cbd5e1;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.form-Heading {
+  font-size: 25px;
+  display: flex;
+  align-self: flex-start;
+}
+input {
+  width: 70%;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+label {
+  padding-left: 4rem;
+  display: flex;
+  align-self: flex-start;
+  font-family: Roboto;
+  font-size: 20px;
+}
+
+select {
+  width: 70%;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+.addBtn {
+  text-align: center;
+  color: white;
+  background-color: #0b69ff;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  align-self: flex-start;
+  margin-left: 4rem;
+
+  border-radius: 8px;
+  border: 0px;
+}
 
 @media screen and (max-width: 767px) {
   .user-Container {
@@ -57,5 +114,11 @@
 
   .transaction-Item-Container {
     flex-direction: column;
+  }
+  .transaction-history-Container {
+    flex-direction: column;
+  }
+  .form-Container {
+    width: 100%;
   }
 }

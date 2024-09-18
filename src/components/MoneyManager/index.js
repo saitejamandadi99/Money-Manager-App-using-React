@@ -32,7 +32,24 @@ class MoneyManager extends Component {
             <MoneyDetails />
           </div>
           <div className="transaction-history-Container">
-            <form></form>
+            <form className="form-Container">
+              <h1 className="form-Heading">Add Transaction</h1>
+              <label htmlFor="Title">Title</label>
+              <input type="text" placeholder="Title" id="Title" />
+              <label htmlFor="Amount">Amount</label>
+              <input type="text" placeholder="Amount" id="Amount" />
+              <label htmlFor="type">Type</label>
+              <select id="type">
+                {transactionTypeOptions.map(eachType => (
+                  <option key={eachType.optionId} value={eachType.optionId}>
+                    {eachType.displayText}
+                  </option>
+                ))}
+              </select>
+              <button type="submit" className="addBtn">
+                Add
+              </button>
+            </form>
             <div className="history-Container">
               <div className="history-Title-Container"></div>
               <ul className="history-Container"></ul>
