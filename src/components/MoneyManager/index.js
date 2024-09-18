@@ -1,11 +1,7 @@
 import {Component} from 'react'
-
 import {v4 as uuidv4} from 'uuid'
-
 import MoneyDetails from '../MoneyDetails'
-
 import TransactionItem from '../TransactionItem'
-
 import './index.css'
 
 const transactionTypeOptions = [
@@ -19,7 +15,6 @@ const transactionTypeOptions = [
   },
 ]
 
-// Write your code here
 class MoneyManager extends Component {
   state = {
     income: 0,
@@ -30,6 +25,7 @@ class MoneyManager extends Component {
     optValue: 'INCOME',
   }
 
+  // Add a new transaction
   onClickAddBtn = event => {
     event.preventDefault()
     const {title, optValue, amount} = this.state
@@ -60,6 +56,34 @@ class MoneyManager extends Component {
     }
   }
 
+  // Delete a transaction
+  onDeleteTransaction = id => {
+    this.setState(prevState => {
+      const transactionToDelete = prevState.transactionList.find(
+        item => item.id === id,
+      )
+
+      if (transactionToDelete) {
+        const {amount, optValue} = transactionToDelete
+        const updatedIncome =
+          optValue === 'INCOME' ? prevState.income - amount : prevState.income
+        const updatedExpenses =
+          optValue === 'EXPENSES'
+            ? prevState.expenses - amount
+            : prevState.expenses
+
+        return {
+          transactionList: prevState.transactionList.filter(
+            item => item.id !== id,
+          ),
+          income: updatedIncome,
+          expenses: updatedExpenses,
+        }
+      }
+      return null
+    })
+  }
+
   onChangeTitle = event => {
     this.setState({title: event.target.value})
   }
@@ -73,9 +97,16 @@ class MoneyManager extends Component {
   }
 
   render() {
-    const {income, expenses, title, amount, optValue, transactionList} =
-      this.state
-    let balance = income - expenses
+    const {
+      income,
+      expenses,
+      title,
+      amount,
+      optValue,
+      transactionList,
+    } = this.state
+    const balance = income - expenses
+
     return (
       <div className="app-Container">
         <div className="money-Manager-App">
@@ -135,7 +166,11 @@ class MoneyManager extends Component {
                 <hr className="line" />
                 <ul className="list-Container">
                   {transactionList.map(each => (
-                    <TransactionItem key={each.id} data={each} />
+                    <TransactionItem
+                      key={each.id}
+                      data={each}
+                      onDeleteTransaction={this.onDeleteTransaction}
+                    />
                   ))}
                 </ul>
               </div>

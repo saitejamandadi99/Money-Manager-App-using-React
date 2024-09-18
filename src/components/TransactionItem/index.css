@@ -9,4 +9,5 @@ li {
   cursor: pointer;
   border: 0px;
   height: 30px;
+  background-color: transparent;
 }
