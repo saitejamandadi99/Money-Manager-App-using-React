@@ -2,6 +2,8 @@ import {Component} from 'react'
 
 import MoneyDetails from '../MoneyDetails'
 
+import TransactionItem from '../TransactionItem'
+
 import './index.css'
 
 const transactionTypeOptions = [
@@ -51,8 +53,18 @@ class MoneyManager extends Component {
               </button>
             </form>
             <div className="history-Container">
-              <div className="history-Title-Container"></div>
-              <ul className="history-Container"></ul>
+              <h1 className="form-Heading">History</h1>
+              <div className="history-List-Container">
+                <div className="history-Title-Container">
+                  <p className="history-title title">Title</p>
+                  <p className="history-title">Amount</p>
+                  <p className="history-title">Type</p>
+                </div>
+                <hr className="line" />
+                <ul className="history-Container">
+                  
+                </ul>
+              </div>
             </div>
           </div>
         </div>

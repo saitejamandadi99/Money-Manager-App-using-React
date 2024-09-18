@@ -100,6 +100,46 @@ select {
   border: 0px;
 }
 
+.history-Container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin: 2%;
+  font-family: Roboto;
+  border: 1px solid #cbd5e1;
+  padding: 15px;
+
+  border-radius: 8px;
+}
+
+.history-List-Container {
+  display: flex;
+  flex-direction: column;
+  width: 99%;
+
+  font-family: Roboto;
+  border: 1px solid #cbd5e1;
+  padding: 15px;
+}
+
+.history-Title-Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.history-title {
+  font-size: 18px;
+  padding-right: 15px;
+}
+.title {
+  padding-right: 25px;
+}
+.line {
+  width: 100%;
+  height: 1px;
+}
+
 @media screen and (max-width: 767px) {
   .user-Container {
     align-items: center;
